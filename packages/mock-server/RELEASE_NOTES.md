@@ -9,6 +9,18 @@
   on every release - edits made directly here will be overwritten.
 -->
 
+## 0.11.0 (2026-06-11)
+
+### Request validation and security fixes
+
+The mock server now validates incoming requests against your OpenAPI document by default and correctly enforces security requirements across all operations.
+
+- Path, query parameters, and JSON request bodies are validated against their schemas, returning a 422 response with detailed violation messages when contracts are broken
+- Security requirements are now evaluated correctly as OR-of-ANDs, with document-level security automatically inherited by operations that do not define their own
+- Basic and Bearer credentials are validated for correct formatting, ensuring mock responses only return when authentication shapes match the specification
+
+[Read full release notes](https://github.com/scalar/scalar/blob/main/packages/mock-server/CHANGELOG.md#0110)
+
 ## 0.10.17 (2026-06-08)
 
 ### Improved OpenAPI reference resolution performance
