@@ -1,5 +1,12 @@
 # @scalar/workspace-store
 
+## 0.54.3
+
+### Patch Changes
+
+- [#9446](https://github.com/scalar/scalar/pull/9446): Fix `anyOf`/`oneOf` array query parameters (e.g. `Optional[List[str]]`) being sent as a single string instead of repeated query parameters
+- [#9480](https://github.com/scalar/scalar/pull/9480): Do not send a Basic `Authorization` header when both the username and password are empty, instead of falling back to a `username:password` placeholder
+
 ## 0.54.2
 
 ### Patch Changes
